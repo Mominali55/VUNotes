@@ -1,3 +1,4 @@
+//Taking Multiple inputs from user and displaying it by using Array.(For)
 #include<stdio.h>
 int main()
 {
