@@ -12,6 +12,7 @@ void main(){
 }
 void funadd(){
     printf("\n i from funadd =%d ",i);
+    printf("i value got incremented by 10");
 }
 void udf(){
     i++;
