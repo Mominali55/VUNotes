@@ -2,6 +2,10 @@
 
 # Question 1
 
+import re
+
+""" 
+
 def chk_alphabets():
 
     user_input=input("Enter a string[a-z,A-Z,0-9,_]")
@@ -41,4 +45,26 @@ def main():
     vowels()
 
 main()
+
+"""
+
+def chk_alphabets_regex(txt: str) -> None:
+
+    upper = len(re.findall(r"[A-Z]", txt))
+    lower = len(re.findall(r"[a-z]", txt))
+    digit = len(re.findall(r"[0-9]", txt)) 
+    space = len(re.findall(r"\s", txt))    
+
+    print(f"Uppercase: {upper}")
+    print(f"Lowercase: {lower}")
+    print(f"Digits:{digit}")
+    print(f"Spaces:{space}")
+
+def main():
+    user_input = input("Enter a string: ")
+    chk_alphabets_regex(user_input)
+
+
+main()
+
 
