@@ -60,9 +60,14 @@ def chk_alphabets_regex(txt: str) -> None:
     print(f"Digits:{digit}")
     print(f"Spaces:{space}")
 
+def chk_vowels_regex(txt: str) -> None:
+    vowels = len(re.findall(r"[aeiou]",txt.lower()))
+    print(f"Total number of vowels:{vowels}")
+    
 def main():
     user_input = input("Enter a string: ")
     chk_alphabets_regex(user_input)
+    chk_vowels_regex(user_input)
 
 
 main()
