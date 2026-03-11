@@ -48,26 +48,28 @@ main()
 
 """
 
-def chk_alphabets_regex(txt: str) -> None:
+def chk_alphabets(txt):
 
+    #Saving total counts
     upper = len(re.findall(r"[A-Z]", txt))
     lower = len(re.findall(r"[a-z]", txt))
     digit = len(re.findall(r"[0-9]", txt)) 
-    space = len(re.findall(r"\s", txt))    
+    space = len(re.findall(r" ", txt))    
 
-    print(f"Uppercase: {upper}")
-    print(f"Lowercase: {lower}")
-    print(f"Digits:{digit}")
-    print(f"Spaces:{space}")
 
-def chk_vowels_regex(txt: str) -> None:
+    print("Uppercase",upper)
+    print("Lowercase",lower)
+    print("Digits",digit)
+    print("Spaces",space)
+
+def chk_vowels_(txt):
     vowels = len(re.findall(r"[aeiou]",txt.lower()))
-    print(f"Total number of vowels:{vowels}")
-    
+    print("Total number of vowels:",vowels)
+
 def main():
-    user_input = input("Enter a string: ")
-    chk_alphabets_regex(user_input)
-    chk_vowels_regex(user_input)
+    user_input = input("Enter a string:")
+    chk_alphabets(user_input)
+    chk_vowels_(user_input) 
 
 
 main()
