@@ -4,10 +4,11 @@ citys.append("kokalta")
 
 citys.insert(2,"Solaphur")
 
+print(citys)
 print(citys[::2])
 
 for city in citys:
-    if city.startswith("P"):
+    if city[0] == "P":
         print(city)
 
 citys.pop()
