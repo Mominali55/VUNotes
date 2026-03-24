@@ -27,10 +27,11 @@ def string_manipulation():
         print("""
             ---Username found---
             Your Password is:
-            """,Record[0])
+            """,Record[username])
 
-    else:
+    else:       
         print("Not found")
+
 
 def main():
     #regular_exp()
